@@ -1,0 +1,23 @@
+---
+# variables go here
+# todo: validate all cause i can't just write a valid html doc from memory
+---
+
+<!DOCTYPE html>
+<html>
+  <head>{-- this is a comment that will be ignored by Flatline --}
+    <meta title="{ content.title }" />
+    <link rel="stylesheet" href="{ path: @resourceDirectory/index.css }" type="text/css" />
+    { if exists: content.style }<style> {-- if statements are obvious-theres also else and else if, etc. exists is also obv --}
+      { content.style }
+    </style>{ /if }
+  </head>
+  <body>
+    <div id="content">
+      { content.body } 
+    </div>
+    { if exists: content.script }<script>
+      { content.script }
+    </script>{ /if }
+  </body>
+</html>

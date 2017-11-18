@@ -1,0 +1,14 @@
+---
+# this is an example of a nested template, and also contains some examples of more advanced functionality
+---
+
+<ul>
+  { for: link, i in content.links } {-- this would loop through every link in "links". todo: filters, paths --}
+  <li id="link{ i }"> {-- i is index --}
+    <a href="{path: @baseUrl/@link.outputPath }">{ link.title }</a>
+  </li>
+  { /for }
+</ul>
+<div id="main">
+  { content.body }
+</div>
