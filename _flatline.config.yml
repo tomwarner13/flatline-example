@@ -1,0 +1,23 @@
+%YAML 1.2
+---
+
+projectName: TomCom #temporary pls fix
+
+outputDirectory: /var/www
+resourceDirectory: resources
+hostname: 'http://localhost:42069'
+relativePath: '/' #access hostname + relativePath with the global variable 'fullPath' 
+
+#### Files which match any of the regexes in this list will not be processed by Flatline.
+ignore:
+  - '\.*'
+
+####Project-specific variables can be accessed by name anywhere in the project.
+projectVariables:
+  #exampleVariable: exampleValue
+  #exampleList:
+    #- exampleList[0]
+    #- exampleList[1]
+  #exampleObject
+    #prop: exampleObject.prop
+    #prop2: exampleObject.prop2
